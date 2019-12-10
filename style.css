@@ -1,13 +1,21 @@
-body{
+*{
     margin: 0;
     padding: 0;
+}
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 1200px;
+    height: 700px;
     font-family: Consolas;
     background-color: #333;
 }
+
+.wrapper{
+    display: flex;
+}
+
 .button{
     position: relative;
     display: inline-block;
@@ -38,7 +46,7 @@ body{
 }
 .button:hover .button__line--top{
     left: 100%;
-    transition: 0.60s;
+    transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
@@ -54,7 +62,7 @@ body{
 }
 .button:hover .button__line--bottom{
     right: 100%;
-    transition: 0.70s;
+    transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
@@ -70,7 +78,7 @@ body{
 }
 .button:hover .button__line--left{
     bottom: 100%;
-    transition: 0.90s;
+    transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
@@ -92,4 +100,66 @@ body{
     -ms-transition: 1s;
     -o-transition: 1s;
     transition-delay: 0.25s;
+}
+
+/* 2 версия кнопки */
+.button_2{
+    position: relative;
+    display: inline-block;
+    padding: 20px 0px;
+    color: rgb(171, 199, 45);
+    text-decoration: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 4px;
+    overflow: hidden;
+}
+ .button__point{
+    position: absolute;
+    display: block;
+} 
+
+.button__body{
+    top: 5%;
+    width: 100%;
+    height: 1px;
+    background: #ABC72D;
+}
+.button__point--right{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -50%;
+    width:8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #D1FF02;
+    background-color: rgb(209, 255, 2);
+    transition-delay: 2s;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+ .button_2:hover .button__point--right{
+     left: 96%;
+     transition: 3s;
+     -webkit-transition: 3s;
+     -moz-transition: 3s;
+     -ms-transition: 3s;
+     -o-transition: 3s;
+     transition-delay: 0.25s;
+}
+@media screen (max-width: 520px) {
+    body{
+        display: flex;
+    }
+
+    .wrapper {
+    }
 }
